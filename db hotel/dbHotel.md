@@ -14,9 +14,9 @@
  - letti_aggiunti int TINYINT NOT NULL 
  - optionals string VARCHAR(20) NOT NULL<!--'fumatori','ariaCondizionata','vistaMare','tv' -->
 
-<!-- TABELLA prezzi -->
-- checkin date DATE NOT NULL
-- checkout date DATE NOT NULL
+<!-- TABELLA prezzi (in base al periodo dell'anno)-->
+- periodo_dal date DATE NOT NULL
+- periodo_al date DATE NOT NULL
 - tipo_camera string VARCHAR(20) NOT NULL <!--'singola','doppia','matrimoniale','tripla' -->
 - prezzo int DOUBLE(6,2) NOT NULL  
 
@@ -31,7 +31,7 @@
 - checkin date DATE NOT NULL
 - checkout date DATE NOT NULL 
 - camera int FK SMALLINT NOT NULL
-- prezzoTotale int DOUBLE(7,2) NOT NULL
+- prezzo_totale int DOUBLE(7,2) NOT NULL
 
 <!-- TABELLA  supplementi_prenotati-->
 - id_prenotazione int FK MEDIUMINT NOT NULL
